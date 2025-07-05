@@ -1,4 +1,7 @@
 
+DROP DATABASE IF EXISTS DVMB;
+
+
 CREATE DATABASE DVMB;
 USE DVMB;
 
@@ -547,7 +550,6 @@ INSERT INTO `NHOMNGUOIDUNG` (`TenNhomNguoiDung`) VALUES ('ADMIN');
 INSERT INTO `NHOMNGUOIDUNG` (`TenNhomNguoiDung`) VALUES ('USER');
 
 -- NGUOIDUNG
-INSERT INTO `NGUOIDUNG` (`TenDangNhap`, `MatKhau`, `MaNND`) VALUES ('admin', 'scrypt:32768:8:1$IA5ADOXR5Bjwxra1$b9057ac3b33788a39fb54c872dfc48fd1c066d25ca18f7c5fc422ecdfea430d72f49f5bbdc3e2cf681736708489ffc1c25a060425443b24555894d1b1b8bfba8', '1');
 INSERT INTO `NGUOIDUNG` (`TenDangNhap`, `MatKhau`, `MaNND`) VALUES ('nghoanh', 'scrypt:32768:8:1$7FinMtuUWGd0l3jG$1cee91eed6781e8eea3e3d51371d974650fc6a7b0f5dd29ea3ae0b41d279fc96419ea000c8d2559de7488898fe26fd5b3deb0a39487205da09f999696ddfb7b8', '2');
 INSERT INTO `NGUOIDUNG` (`TenDangNhap`, `MatKhau`, `MaNND`) VALUES ('trmikhang', 'scrypt:32768:8:1$7FinMtuUWGd0l3jG$1cee91eed6781e8eea3e3d51371d974650fc6a7b0f5dd29ea3ae0b41d279fc96419ea000c8d2559de7488898fe26fd5b3deb0a39487205da09f999696ddfb7b8', '2');
 INSERT INTO `NGUOIDUNG` (`TenDangNhap`, `MatKhau`, `MaNND`) VALUES ('lebachau', 'scrypt:32768:8:1$7FinMtuUWGd0l3jG$1cee91eed6781e8eea3e3d51371d974650fc6a7b0f5dd29ea3ae0b41d279fc96419ea000c8d2559de7488898fe26fd5b3deb0a39487205da09f999696ddfb7b8', '2');
@@ -558,7 +560,7 @@ INSERT INTO `NGUOIDUNG` (`TenDangNhap`, `MatKhau`, `MaNND`) VALUES ('hotuanh', '
 INSERT INTO `NGUOIDUNG` (`TenDangNhap`, `MatKhau`, `MaNND`) VALUES ('bungha', 'scrypt:32768:8:1$7FinMtuUWGd0l3jG$1cee91eed6781e8eea3e3d51371d974650fc6a7b0f5dd29ea3ae0b41d279fc96419ea000c8d2559de7488898fe26fd5b3deb0a39487205da09f999696ddfb7b8', '2');
 INSERT INTO `NGUOIDUNG` (`TenDangNhap`, `MatKhau`, `MaNND`) VALUES ('daquanh', 'scrypt:32768:8:1$7FinMtuUWGd0l3jG$1cee91eed6781e8eea3e3d51371d974650fc6a7b0f5dd29ea3ae0b41d279fc96419ea000c8d2559de7488898fe26fd5b3deb0a39487205da09f999696ddfb7b8', '2');
 INSERT INTO `NGUOIDUNG` (`TenDangNhap`, `MatKhau`, `MaNND`) VALUES ('phanthu', 'scrypt:32768:8:1$7FinMtuUWGd0l3jG$1cee91eed6781e8eea3e3d51371d974650fc6a7b0f5dd29ea3ae0b41d279fc96419ea000c8d2559de7488898fe26fd5b3deb0a39487205da09f999696ddfb7b8', '2');
-
+INSERT INTO `NGUOIDUNG` (`TenDangNhap`, `MatKhau`, `MaNND`) VALUES ('admin', 'scrypt:32768:8:1$jPPPWkb0FdFLf4iH$c4c43b885fc3ab5cfa28eea15b3663af5c02ae9c0b62a8ed3691fb0dc546fab41c095384110ff1564c1254febee30ef41dccfd75b2de785a17514340ae453865', '1');
 -- HANHKHACH
 INSERT INTO `HANHKHACH` (`HoHK`, `TenHK`, `DanhXung`, `CCCD`, `NgaySinh`, `QuocTich`, `LoaiHK`) 
 VALUES ('Nguyễn Hoàng', 'Anh', 'Anh', '123048394313', STR_TO_DATE('10/05/1995', '%d/%m/%Y'), 'Việt Nam', 'Người lớn');
@@ -583,7 +585,7 @@ VALUES ('Phan Anh', 'Thư', 'Bà', '123089890991', STR_TO_DATE('29/10/1978', '%d
 
 -- CHUYENBAY
 INSERT INTO `CHUYENBAY` (`MaChuyenBay`, `MaMB`, `MaSanBayDi`, `ThoiGianDi`, `MaSanBayDen`, `ThoiGianDen`, `SLGheBus`, `SLGheEco`, `SLBusConLai`, `SLEcoConLai`, `LoaiChuyenBay`, `GiaVeEco`, `GiaVeBus`, `TrangThaiVe`) 
-VALUES ('VN123', '1', 'HAN', STR_TO_DATE('10/10/2024 8:00', '%d/%m/%Y %H:%i'), 'SGN', STR_TO_DATE('10/10/2024 10:30', '%d/%m/%Y %H:%i'), '5', '5', '5', '5', 'Nội Địa', '5000000', '10000000', 0);
+VALUES ('VN123', '1', 'HAN', STR_TO_DATE('10/10/2024 8:00', '%d/%m/%Y %H:%i'), 'SGN', STR_TO_DATE('10/10/2024 10:30', '%d/%m/%Y %H:%i'), '5', '5', '5', '5', 'Nội Địa', '10000000', '10000000', 0);
 INSERT INTO `CHUYENBAY` (`MaChuyenBay`, `MaMB`, `MaSanBayDi`, `ThoiGianDi`, `MaSanBayDen`, `ThoiGianDen`, `SLGheBus`, `SLGheEco`, `SLBusConLai`, `SLEcoConLai`, `LoaiChuyenBay`, `GiaVeEco`, `GiaVeBus`, `TrangThaiVe`) 
 VALUES ('VJ456', '4', 'SGN', STR_TO_DATE('11/10/2024 11:15', '%d/%m/%Y %H:%i'), 'DAD', STR_TO_DATE('11/10/2024 13:00', '%d/%m/%Y %H:%i'), '0', '10', '0', '10', 'Nội Địa', '1500000', '3000000', 0);
 INSERT INTO `CHUYENBAY` (`MaChuyenBay`, `MaMB`, `MaSanBayDi`, `ThoiGianDi`, `MaSanBayDen`, `ThoiGianDen`, `SLGheBus`, `SLGheEco`, `SLBusConLai`, `SLEcoConLai`, `LoaiChuyenBay`, `GiaVeEco`, `GiaVeBus`, `TrangThaiVe`) 
@@ -655,4 +657,5 @@ INSERT INTO THANHTOAN (MaThanhToan, MaDatCho, MaKhuyenMai, TienGiam, Thue, SoTie
 VALUES ('3', '6', 'UuDaiT10', '840000', '30800000', '29960000', STR_TO_DATE('05/10/2024', '%d/%m/%Y'), 'Chuyển khoản');
 
 
+SELECT * FROM NGUOIDUNG WHERE TenDangNhap = 'adminn';
 

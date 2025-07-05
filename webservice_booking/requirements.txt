@@ -1,0 +1,14 @@
+flask
+flask-sqlalchemy
+flask-cors
+pymysql
+python-dotenv
+flask-login
+redis
+
+Flask-JWT-Extended #4.3.1
+sts #2.26.0
+python-decouple #3.4
+oauthlib #3.1.1
+
+Flask-Mail 

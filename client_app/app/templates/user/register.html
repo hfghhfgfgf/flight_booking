@@ -163,7 +163,7 @@
 
         btnGoogleLogin.addEventListener('click', async function () {
             try {
-                const response = await fetch(`${API_URL}/login/google`, {
+                const response = await fetch(`${API_URL}/api/login/google`, {
                     method: 'GET',
                     headers: { 'Content-Type': 'application/json' }
                 });
